@@ -6,23 +6,24 @@ public class HW {
 		hello("Victor");
     hello("Valera");
 
-    double l = 7;
-    System.out.println("Площадь квадрата со стороной "+l+" равна "+ sqrt (l)+".");
+    //print area of square
+    Square s = new Square(5);
+    System.out.println("Площадь квадрата со стороной "+s.l+" равна "+ area (s)+".");
 
-    double a = 4;
-    double b = 5;
-    System.out.println("Площадь прямоугольника со сторонами "+a+" и "+b+" равна " + area(a,b) + ".");
+    //print are of rectangle
+    Rectangle r = new Rectangle(4, 6);
+    System.out.println("Площадь прямоугольника со сторонами "+r.a+" и "+r.b+" равна " + area(r) + ".");
 	}
 
 	private static void hello (String user) {
     System.out.println("Hello, " + user + "!");
   }
 
-  private static double sqrt (double len) {
-    return len * len;
+  private static double area (Square s) {
+    return s.l * s.l;
   }
 
-  private static double area (double a, double b) {
-    return a * b;
+  private static double area (Rectangle r) {
+    return r.a * r.b;
   }
 }
